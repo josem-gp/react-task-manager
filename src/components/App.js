@@ -3,11 +3,12 @@ import ToDo from "./ToDo";
 import todosData from "../taskData";
 
 function App() {
-  return (
-    <div className="todo-list">
-      <ToDo />
-    </div>
-  );
+  const todoData = todosData.map((element) => {
+    console.log(element);
+    <ToDo key={element.id} values={element} />;
+  });
+
+  return <div className="todo-list">{todoData}</div>;
 }
 
 export default App;
