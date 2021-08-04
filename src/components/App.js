@@ -6,7 +6,6 @@ function App() {
   const todoData = todosData.map((element) => (
     <ToDo key={element.id} values={element} />
   ));
-  console.log(todoData);
   return <div className="todo-list">{todoData}</div>;
 }
 
