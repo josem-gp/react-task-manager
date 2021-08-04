@@ -1,7 +1,7 @@
 import React from "react";
 
-function App() {
+const ToDo = () => {
   return <div></div>;
-}
+};
 
-export default App;
+export default ToDo;
