@@ -3,10 +3,17 @@ import ToDo from "./ToDo";
 import todosData from "../taskData";
 
 function App() {
-  const [clicked, setClicked] = useState();
+  const [clicked, setClicked] = useState(todosData);
 
   const clickBox = (id) => {
-    console.log(`Clicked ${id}`);
+    const mappedBox = clicked.map((el) => {
+      if (el.id === id) {
+        el.completed = !el.completed;
+      }
+      return el;
+    });
+
+    setClicked(mappedBox);
   };
 
   console.log(clicked);
