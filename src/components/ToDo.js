@@ -1,6 +1,12 @@
 import React from "react";
 
 const ToDo = (props) => {
+  const completedStyle = {
+    fontStyle: "italic",
+    color: "#cdcdcd",
+    textDecoration: "line-through",
+  };
+
   const handleClick = (clickedId) => {
     props.clickBox(clickedId);
   };
@@ -14,7 +20,9 @@ const ToDo = (props) => {
           handleClick(props.values.id);
         }}
       ></input>
-      <p>{props.values.text}</p>
+      <p style={props.values.completed ? completedStyle : null}>
+        {props.values.text}
+      </p>
     </div>
   );
 };

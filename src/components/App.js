@@ -16,8 +16,6 @@ function App() {
     setClicked(mappedBox);
   };
 
-  console.log(clicked);
-
   const todoData = todosData.map((element) => (
     <ToDo key={element.id} values={element} clickBox={clickBox} />
   ));
