@@ -1,14 +1,17 @@
 import React from "react";
 
 const ToDo = (props) => {
-  console.log(props);
+  const handleClick = (clickedId) => {
+    props.clickBox(clickedId);
+  };
+
   return (
     <div className="todo-item">
       <input
         type="checkbox"
         checked={props.values.completed}
         onChange={() => {
-          props.handleChange(props.values.id);
+          handleClick(props.values.id);
         }}
       ></input>
       <p>{props.values.text}</p>
